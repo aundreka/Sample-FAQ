@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - LOPhils</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does LOPhils provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LOPhils is a boutique risk management and administrative support consultancy established in 2011. We serve the Australian legal industry and offer cloud-based software solutions tailored for homeowners, as well as small to medium-sized builders and contractors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is LOPhils' background?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our team consists of experienced lawyers, IT professionals, and business analysts who leverage proprietary software to enhance productivity and streamline workflow quality for our clients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What future plans does LOPhils have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are actively planning to expand our operations to other cities and diversify our service offerings by adding more commercial law services to our portfolio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do your cloud-based software solutions benefit clients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our solutions streamline administrative tasks and risk management processes, offering real-time data and insights that help homeowners, builders, and contractors manage projects efficiently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What kind of support can clients expect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clients receive dedicated technical support, comprehensive training on our proprietary systems, and ongoing consultancy to ensure a smooth and secure experience with our software solutions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How secure are your software solutions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Security is a top priority for LOPhils. Our software is built with robust security measures to protect your data, ensuring compliance with industry standards and providing peace of mind."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I get in touch with LOPhils?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach out to us via our Contact page or email us directly at info@lopihls.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is LOPhils located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our headquarters are based in the Philippines, and we are expanding our services to additional cities across the country."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- header area -->
+  <header>
+    <h1>LOPhils Inc.</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- breadcrumb navigation for context -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="#">Home</a> &gt; <a href="#">Support</a> &gt; <span>FAQ</span>
+  </nav>
+
+  <!-- main content area -->
+  <main>
+    <section id="faq">
+      <!-- FAQ page header -->
+      <header>
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our services, company background, and technical support.</p>
+      </header>
+
+      <!-- search area with search-as-you-type functionality -->
+      <form id="searchForm" role="search">
+        <label for="faqSearch" class="visually-hidden">Search FAQs:</label>
+        <input type="search" id="faqSearch" name="q" placeholder="Search FAQs..." autocomplete="off">
+      </form>
+      
+      <!-- filter buttons for dynamic filtering by category -->
+      <div class="filter-buttons" role="group" aria-label="FAQ Categories">
+        <button type="button" data-filter="all">All</button>
+        <button type="button" data-filter="company">Company</button>
+        <button type="button" data-filter="services">Services</button>
+        <button type="button" data-filter="support">Support</button>
+        <button type="button" data-filter="general">General</button>
+      </div>
+      
+      <!-- FAQ accordion container -->
+      <section class="accordion-container" aria-label="FAQ Accordion">
+        <!-- each FAQ is now an article with semantic roles -->
+        <article class="accordion" data-category="company">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>What services does LOPhils provide?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              LOPhils is a boutique risk management and administrative support consultancy established in 2011.
+              We serve the Australian legal industry and offer cloud-based software solutions tailored for homeowners,
+              as well as small to medium-sized builders and contractors.
+            </p>
+            <div class="read-more">
+              <p class="read-more-preview">
+                <span>This is a preview of the answer...</span>
+                <button class="read-more-toggle" aria-expanded="false">Read More</button>
+              </p>
+              <p class="read-more-content">
+                Our comprehensive approach combines legal expertise with cutting-edge technology to deliver customized solutions that help our clients manage risk and improve operational efficiency.
+                <button class="read-more-toggle" aria-expanded="true">Show Less</button>
+              </p>
+            </div>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="company">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>What is LOPhils' background?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              Our team consists of experienced lawyers, IT professionals, and business analysts who leverage proprietary software
+              to enhance productivity and streamline workflow quality for our clients.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="services">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>What future plans does LOPhils have?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              We are actively planning to expand our operations to other cities and diversify our service offerings by adding
+              more commercial law services to our portfolio.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="services">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>How do your cloud-based software solutions benefit clients?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              Our solutions streamline administrative tasks and risk management processes, offering real-time data and insights
+              that help homeowners, builders, and contractors manage projects efficiently.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="support">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>What kind of support can clients expect?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              Clients receive dedicated technical support, comprehensive training on our proprietary systems, and ongoing
+              consultancy to ensure a smooth and secure experience with our software solutions.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="support">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>How secure are your software solutions?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              Security is a top priority for LOPhils. Our software is built with robust security measures to protect your data,
+              ensuring compliance with industry standards and providing peace of mind.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="general">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>How can I get in touch with LOPhils?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              You can reach out to us via our <a href="/contact">Contact</a> page or email us directly at 
+              <a href="mailto:info@lopihls.com">info@lopihls.com</a>.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="accordion" data-category="general">
+          <header class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+            <h3>Where is LOPhils located?</h3>
+            <span class="icon" aria-hidden="true">+</span>
+          </header>
+          <div class="accordion-content" role="region">
+            <p>
+              Our headquarters are based in the Philippines, and we are expanding our services to additional cities across the country.
+            </p>
+            <div class="feedback" aria-label="Feedback">
+              <span>Was this helpful? </span>
+              <button class="thumb-up" aria-label="Thumbs up">👍</button>
+              <button class="thumb-down" aria-label="Thumbs down">👎</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- submission form for additional questions -->
+      <section id="submit-question">
+        <header>
+          <h2>Have a Question?</h2>
+        </header>
+        <form action="/submit-question" method="post">
+          <fieldset>
+            <legend class="visually-hidden">Submit your question</legend>
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" placeholder="Type your question here..." required></textarea>
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>LOPhils Inc. is a boutique risk management and administrative support consultancy established in 2011.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+          <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:info@lopihls.com">info@lopihls.com</a></li>
+          <li>Phone: (123) 456-7890</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LOPhils. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    // accordion functionality: toggle visibility and update aria attributes
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const accordion = header.parentElement;
+        const expanded = header.getAttribute('aria-expanded') === 'true';
+        header.setAttribute('aria-expanded', String(!expanded));
+        const icon = header.querySelector('.icon');
+        if (!expanded) {
+          icon.textContent = '-';
+          accordion.classList.add('active');
+        } else {
+          icon.textContent = '+';
+          accordion.classList.remove('active');
+        }
+      });
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          header.click();
+        }
+      });
+    });
+
+    // read-more toggle functionality for lengthy answers
+    document.querySelectorAll('.read-more-toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const content = e.target.closest('.accordion-content');
+        const readMoreContent = content.querySelector('.read-more-content');
+        const preview = content.querySelector('.read-more-preview');
+        
+        if (readMoreContent.style.display === 'block') {
+          // Hide the longer content
+          readMoreContent.style.display = 'none';
+          // Show the short preview again
+          preview.style.display = 'block';
+        } else {
+          // Show the longer content
+          readMoreContent.style.display = 'block';
+          // Hide the short preview
+          preview.style.display = 'none';
+        }
+      });
+    });
+    
+
+    // search-as-you-type: filter FAQs based on the search term
+    document.getElementById('faqSearch').addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      document.querySelectorAll('.accordion').forEach(accordion => {
+        const question = accordion.querySelector('.accordion-header h3').textContent.toLowerCase();
+        accordion.style.display = question.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+
+    // dynamic filtering: show/hide accordions based on selected category
+    document.querySelectorAll('.filter-buttons button').forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        document.querySelectorAll('.accordion').forEach(accordion => {
+          if (filter === 'all' || accordion.getAttribute('data-category') === filter) {
+            accordion.style.display = 'block';
+          } else {
+            accordion.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

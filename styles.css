@@ -1,0 +1,504 @@
+/* ===============================================
+   CSS Variables and Global Styles
+=============================================== */
+:root {
+    --primary-color: #007bff;
+    --accent-color: #0056b3;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --light-color: #fff;
+    --border-color: #e1e1e1;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    /* Font families */
+    --font-body: 'Roboto', sans-serif;
+    --font-heading: 'Inter', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* ===============================================
+     Header & Footer Styling
+  =============================================== */
+  header {
+    background: linear-gradient(135deg, #ffffff, #f0f8ff); 
+    padding: var(--spacing-medium) var(--spacing-large); 
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0,123,255,0.15);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  footer {
+    background-color: var(--light-color);
+    padding: var(--spacing-medium) var(--spacing-large);
+    text-align: center;
+    border-top: 1px solid rgba(0,123,255,0.15);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  
+  
+  /* ===============================================
+     Main Navigation with Flexbox
+  =============================================== */
+  nav[aria-label="Main Navigation"] ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-small) 0 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-large);
+  }
+  
+  @media (max-width: 600px) {
+    nav[aria-label="Main Navigation"] ul {
+      flex-direction: column;
+      gap: var(--spacing-small);
+    }
+  }
+  
+  nav[aria-label="Main Navigation"] ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  nav[aria-label="Main Navigation"] ul li a:hover,
+  nav[aria-label="Main Navigation"] ul li a:focus {
+    color: var(--accent-color);
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  /* ===============================================
+     Breadcrumb
+  =============================================== */
+  .breadcrumb {
+    font-size: 0.9rem;
+    margin: var(--spacing-medium);
+    text-align: center;
+  }
+  
+  .breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  /* ===============================================
+     Main Content Area
+  =============================================== */
+  main {
+    max-width: 1600px;
+    margin: var(--spacing-medium) auto;
+    padding: 0 var(--spacing-large);
+  }
+  
+  section#faq > header {
+    display: flex;                
+    align-items: center;           
+    justify-content: space-between;
+    margin-bottom: var(--spacing-large);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: #f9f9f9;    
+    border-radius: 8px;          
+  }
+  
+  section#faq > header h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  section#faq > header p {
+    margin: 0;
+    max-width: 1000px;            
+    color: #666;
+    text-align: right;           
+  }
+  
+  @media (max-width: 768px) {
+    section#faq > header {
+      flex-direction: column;     
+      align-items: flex-start;    
+    }
+    section#faq > header p {
+      text-align: left;           
+      margin-top: var(--spacing-small);
+    }
+  }
+  
+  
+  
+  /* ===============================================
+     Search Form
+  =============================================== */
+  form#searchForm {
+    text-align: center;
+    margin-bottom: var(--spacing-medium);
+  }
+  
+  form#searchForm input[type="search"] {
+    width: 100%;
+    max-width: 600px;           
+    padding: var(--spacing-medium); 
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1.2rem;          
+    transition: border-color 0.3s;
+  }
+  
+  form#searchForm input[type="search"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }  
+  
+  /* ===============================================
+     Filter Buttons
+  =============================================== */
+  .filter-buttons {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .filter-buttons button {
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-small) var(--spacing-medium);
+    margin: 0 var(--spacing-small);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .filter-buttons button:hover,
+  .filter-buttons button:focus {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  /* ===============================================
+     Accordion Styles
+  =============================================== */
+  .accordion-container {
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .accordion {
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-small);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s;
+  }
+  
+  .accordion:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .accordion-header {
+    padding: var(--spacing-medium);
+    cursor: pointer;
+    background-color: #f1f3f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+  }
+  
+  .accordion-header:hover,
+  .accordion-header:focus {
+    background-color: #e9ecef;
+    outline: none;
+  }
+  
+  .accordion-header h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .accordion-header span.icon {
+    font-size: 1.2rem;
+  }
+  
+  .accordion-content {
+    padding: var(--spacing-medium);
+    display: none;
+    border-top: 1px solid var(--border-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .accordion.active .accordion-content {
+    display: block;
+  }
+  
+  /* ===============================================
+     Read More Section
+  =============================================== */
+  .read-more {
+    margin-top: var(--spacing-small);
+  }
+
+  .read-more-content {
+    display: none;
+  }
+
+  .read-more-preview {
+    display: block;
+  }
+  
+  
+  .read-more-preview,
+  .read-more-content {
+    margin: var(--spacing-small) 0;
+  }
+  
+  .read-more-preview button,
+  .read-more-content button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .read-more-preview button:hover,
+  .read-more-content button:hover {
+    color: var(--accent-color);
+  }
+  
+  /* ===============================================
+     Feedback Buttons
+  =============================================== */
+  .feedback {
+    margin-top: var(--spacing-small);
+    font-size: 0.9rem;
+  }
+  
+  .feedback button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 var(--spacing-small);
+    transition: transform 0.2s;
+  }
+  
+  .feedback button:hover,
+  .feedback button:focus {
+    transform: scale(1.1);
+    outline: none;
+  }
+  
+  /* ===============================================
+     Submission Form Styles
+  =============================================== */
+  section#submit-question {
+    background: var(--light-color);
+    padding: var(--spacing-medium);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-large);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+  
+  section#submit-question h2 {
+    margin-top: 0;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+  }
+  
+  section#submit-question label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+  
+  section#submit-question textarea {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  section#submit-question textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  section#submit-question button {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: var(--spacing-small);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  section#submit-question button:hover,
+  section#submit-question button:focus {
+    background: var(--accent-color);
+    transform: scale(1.03);
+    outline: none;
+  }
+  
+  /* ===============================================
+     Footer Styling
+  =============================================== */
+  footer {
+    background-color: #ffffff; 
+    color: #a7a7a7;
+    padding: 40px var(--spacing-medium);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover,
+  footer a:focus {
+    color: var(--accent-color);
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: var(--spacing-small);
+  }
+  
+  .footer-column h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-small);
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: var(--spacing-large);
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-column {
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+  
+  
+  /* ===============================================
+     Utility Classes
+  =============================================== */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* ===============================================
+     Dark Mode Variant
+  =============================================== */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --light-color: #1e1e1e;
+      --border-color: #333;
+    }
+  
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  
+    header, footer {
+      background-color: var(--light-color);
+    }
+  
+    nav[aria-label="Main Navigation"] ul li a {
+      color: var(--primary-color);
+    }
+  
+    .breadcrumb {
+      color: var(--text-color);
+    }
+  
+    section#faq p {
+      color: #bbb;
+    }
+  }
+  
