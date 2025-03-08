@@ -469,36 +469,38 @@
     border: 0;
   }
   
+
+  
   /* ===============================================
-     Dark Mode Variant
-  =============================================== */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --light-color: #1e1e1e;
-      --border-color: #333;
-    }
-  
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-  
-    header, footer {
-      background-color: var(--light-color);
-    }
-  
-    nav[aria-label="Main Navigation"] ul li a {
-      color: var(--primary-color);
-    }
-  
-    .breadcrumb {
-      color: var(--text-color);
-    }
-  
-    section#faq p {
-      color: #bbb;
-    }
+   Dark Mode Variant (Override for White Background)
+=============================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #f8f9fa; /* Force white background */
+    --text-color: #333;
+    --light-color: #fff;
+    --border-color: #e1e1e1;
   }
-  
+
+  body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color);
+  }
+
+  header, footer, main, section, .accordion, .filter-buttons button {
+    background-color: var(--light-color) !important;
+    color: var(--text-color);
+  }
+
+  nav[aria-label="Main Navigation"] ul li a {
+    color: var(--primary-color);
+  }
+
+  .breadcrumb {
+    color: var(--text-color);
+  }
+
+  section#faq p {
+    color: #666;
+  }
+}
