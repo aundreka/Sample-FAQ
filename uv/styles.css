@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+#checkmark {
+    position: absolute;
+    right: 12px;
+    font-size: 1.2rem;
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin: 20px 0;
+    height: 20px;
+    display: block;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background: #0056b3;
+}
